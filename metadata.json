@@ -1,0 +1,6 @@
+{
+  "name": "ISPAT-LOG",
+  "description": "ISPAT-LOG: Integrated Steel Procurement And Transportation - Logistics Optimization Grid for Indian Steel Logistics (Ministry of Steel - SIH 2026)",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

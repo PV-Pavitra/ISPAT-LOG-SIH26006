@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+/* Hide scrollbar for clean horizontal tabs */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom Leaflet Tooltip & Marker Overrides */
+.leaflet-custom-tooltip {
+  background: #002147;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 4px 8px;
+  box-shadow: 0 4px 12px rgba(0, 33, 71, 0.25);
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 14px;
+  box-shadow: 0 10px 25px -5px rgba(0, 33, 71, 0.2);
+  border: 1px solid #E2E8F0;
+  padding: 2px;
+}
+
+.leaflet-container {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Major White & Dark Blue Enterprise Theme Enhancements */
+body {
+  color: #0F172A;
+  background-color: #F8FAFC;
+}
+
+/* High contrast inputs and controls */
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+  background-color: #FFFFFF;
+  color: #0F172A;
+  border-color: #CBD5E1;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #002147;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 33, 71, 0.15);
+}
