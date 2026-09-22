@@ -81,3 +81,38 @@ export const LogoPlaceholder: React.FC<LogoProps> = ({
 
 // Also export as IspatLogLogo so existing imports continue working seamlessly
 export const IspatLogLogo = LogoPlaceholder;
+
+interface SihLogoBadgeProps {
+  className?: string;
+  compact?: boolean;
+  theme?: 'light' | 'dark';
+}
+
+export const SihLogoBadge: React.FC<SihLogoBadgeProps> = ({
+  className = '',
+  compact = false,
+  theme = 'light',
+}) => {
+  const isDark = theme === 'dark';
+
+  return (
+    <div
+      className={`inline-flex items-center gap-2 rounded-xl border px-3 py-2 ${
+        compact ? 'text-[10px]' : 'text-xs'
+      } ${
+        isDark
+          ? 'border-sky-800 bg-slate-900/80 text-white'
+          : 'border-slate-200 bg-white text-[#002147]'
+      } ${className}`}
+      aria-label="Smart India Hackathon 2026"
+    >
+      <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#002147] text-[9px] font-black leading-none text-white">
+        SIH
+      </div>
+      <div className="flex flex-col leading-tight">
+        <span className="font-black tracking-wide">SMART INDIA</span>
+        <span className={isDark ? 'text-sky-300' : 'text-[#0284C7]'}>HACKATHON 2026</span>
+      </div>
+    </div>
+  );
+};
